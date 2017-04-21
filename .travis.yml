@@ -22,7 +22,7 @@ cache:
 
 env:
   global:
-    - CORE_BRANCH=master
+    - CORE_BRANCH=oci
     - APP_NAME=notifications
   matrix:
     - DB=sqlite
@@ -33,7 +33,7 @@ branches:
     - /^stable\d+(\.\d+)?$/
 
 before_install:
-  - wget https://raw.githubusercontent.com/nextcloud/travis_ci/master/before_install.sh
+  - wget https://raw.githubusercontent.com/nextcloud/travis_ci/oci/before_install.sh
   - . ./before_install.sh $APP_NAME $CORE_BRANCH $DB
 
   # Add some output debugging information
